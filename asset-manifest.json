@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/erzhena-tsyrendashieva-project-five/static/css/main.636b80c4.chunk.css",
+    "main.js": "/erzhena-tsyrendashieva-project-five/static/js/main.0903bf6b.chunk.js",
+    "main.js.map": "/erzhena-tsyrendashieva-project-five/static/js/main.0903bf6b.chunk.js.map",
+    "runtime-main.js": "/erzhena-tsyrendashieva-project-five/static/js/runtime-main.9ede6a49.js",
+    "runtime-main.js.map": "/erzhena-tsyrendashieva-project-five/static/js/runtime-main.9ede6a49.js.map",
+    "static/css/2.95456d05.chunk.css": "/erzhena-tsyrendashieva-project-five/static/css/2.95456d05.chunk.css",
+    "static/js/2.559d868c.chunk.js": "/erzhena-tsyrendashieva-project-five/static/js/2.559d868c.chunk.js",
+    "static/js/2.559d868c.chunk.js.map": "/erzhena-tsyrendashieva-project-five/static/js/2.559d868c.chunk.js.map",
+    "static/js/3.b5092a93.chunk.js": "/erzhena-tsyrendashieva-project-five/static/js/3.b5092a93.chunk.js",
+    "static/js/3.b5092a93.chunk.js.map": "/erzhena-tsyrendashieva-project-five/static/js/3.b5092a93.chunk.js.map",
+    "index.html": "/erzhena-tsyrendashieva-project-five/index.html",
+    "static/css/2.95456d05.chunk.css.map": "/erzhena-tsyrendashieva-project-five/static/css/2.95456d05.chunk.css.map",
+    "static/css/main.636b80c4.chunk.css.map": "/erzhena-tsyrendashieva-project-five/static/css/main.636b80c4.chunk.css.map",
+    "static/js/2.559d868c.chunk.js.LICENSE.txt": "/erzhena-tsyrendashieva-project-five/static/js/2.559d868c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9ede6a49.js",
+    "static/css/2.95456d05.chunk.css",
+    "static/js/2.559d868c.chunk.js",
+    "static/css/main.636b80c4.chunk.css",
+    "static/js/main.0903bf6b.chunk.js"
+  ]
+}
