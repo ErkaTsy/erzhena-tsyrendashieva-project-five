@@ -37,8 +37,8 @@ class App extends Component{
            
           </div>
           <div className="Main-section">
-            {this.state.currentComponent === GOAL && <Goals/>}
-            {this.state.currentComponent === ADDGOAL && <AddGoals />}
+            {this.state.currentComponent === GOAL && <Goals />}
+            {this.state.currentComponent === ADDGOAL && <AddGoals displayGoals={()=>this.showComponent(GOAL)}/>}
           </div>
         </div>
       </div>

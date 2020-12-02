@@ -22,3 +22,23 @@ code {
   background: white;
   margin: 5px;
 }
+
+.displayedGoals{
+  display: flex;
+  flex-direction: row;
+ 
+}
+.displayedGoals li{ 
+  display: flex;
+  flex-direction: column; 
+    background: yellow;
+    list-style-type: none;
+    margin: 2px;
+    padding: 0 5px;
+    width: 50%;
+    text-decoration: none;  
+}
+
+.displayedGoals span{
+  font-size: 0.8rem;
+}
