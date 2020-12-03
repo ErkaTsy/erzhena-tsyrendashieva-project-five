@@ -12,9 +12,11 @@ class App extends Component{
   constructor(){
     super();
     this.state = {
-      currentComponent:GOAL
+      currentComponent:GOAL,
+      currentGoal: {}
     };
-
+    
+    this.updateGoal = this.updateGoal.bind(this);
     this.showComponent = this.showComponent.bind(this);
   }
   
@@ -24,6 +26,13 @@ class App extends Component{
     })
   }
   
+  updateGoal(goal){
+    // console.log(goal, "updateGoal funct")
+    this.setState({
+      currentGoal: goal
+    })
+    this.showComponent(ADDGOAL);
+  }
 
   render(){  
     const { goals} =this.state;
@@ -33,12 +42,12 @@ class App extends Component{
         <div className="App-wrapper App-main">
           <div className="Side-section">
             <button>userAccount</button>
-            <button onClick={() => this.showComponent(ADDGOAL)}>Add your goal</button>
-           
+            <button onClick={() => this.showComponent(GOAL)}>My goal list</button>
+            <button onClick={() => this.showComponent(ADDGOAL)}>Add your goal</button>           
           </div>
           <div className="Main-section">
-            {this.state.currentComponent === GOAL && <Goals />}
-            {this.state.currentComponent === ADDGOAL && <AddGoals displayGoals={()=>this.showComponent(GOAL)}/>}
+            {this.state.currentComponent === GOAL && <Goals updateGoal={(goal) => this.updateGoal(goal)}/>}
+            {this.state.currentComponent === ADDGOAL && <AddGoals currentGoal={ this.state.currentGoal} displayGoals={()=>this.showComponent(GOAL)}/>}
           </div>
         </div>
       </div>

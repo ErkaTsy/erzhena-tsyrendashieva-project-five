@@ -1,15 +1,11 @@
-import { Component, useState} from 'react';
+import { Component } from 'react';
 import firebase from "./firebase.js";
 
 class Goals extends Component {
   constructor() {
     super();
     this.state = {
-      // goalId: [],
-      goals: [],
-      // goalName: "",
-      // goalDeadline: "",
-      // goalNote: "",
+      goals: []
     };
   }
 
@@ -17,28 +13,32 @@ class Goals extends Component {
     // make a reference to the database
     const dbRef = firebase.database().ref();
     // get data from the database
-    dbRef.on("value", (data) => {
+    dbRef.on("value", (data) => {      
       const firebaseDataObj = data.val();
-      console.log(firebaseDataObj, "states property");
+      if (firebaseDataObj){
+        const newGoals = Object.keys(firebaseDataObj).map((key) => {
+          return { ...firebaseDataObj[key], id: key }; //pass key as variable id to the newGoals object
+        });
+        this.setState({
+          goals: newGoals,
+        });
+      }else{
+        return null;
+      }
 
-      const newGoals = Object.keys(firebaseDataObj).map((key) => {
-        return { ...firebaseDataObj[key], id: key }; //pass key as variable id to the newGoals object
-      });
-      this.setState({
-        goals: newGoals,
-      });
-      console.log(newGoals, "states property");
+      
     });
   }
   // function that deletes goal from the db
   removeGoal = (goalId) => {
     const dbRef = firebase.database().ref();
-    dbRef.child(goalId).remove();
+    console.log("remove here", goalId)
+    dbRef.child(goalId).remove();    
   };
 
   // function that updates goals
-  updateGoal = (goalId) => {
-    
+  updateGoal = (goal) =>{
+    this.props.updateGoal(goal);
   };
 
   render() {
@@ -46,9 +46,13 @@ class Goals extends Component {
       <div>
         <h1>Here are goal lists</h1>
         <ul className="displayedGoals">
-          {this.state.goals.map((goal, index) => {
+          {this.state.goals.map((goal) => {
             return (
-              <li key={index}>
+              
+              <li key={goal.id}>
+                {/* <div className="toggleBar">
+
+                </div> */}
                 <div className="goalName">
                   <span>Name of goal:</span>
                   <p>{goal.goalName}</p>
@@ -63,7 +67,7 @@ class Goals extends Component {
                 </div>
                 <button
                   onClick={() => {
-                    this.updateGoal(goal.id);
+                    this.updateGoal(goal);
                   }}
                 >
                   Edit
@@ -75,8 +79,9 @@ class Goals extends Component {
                 >
                   Delete
                 </button>
-                <button>Accomplished</button>
-              </li>
+                <button >Accomplished</button>
+              </li> 
+                                         
             );
           })}
         </ul>
