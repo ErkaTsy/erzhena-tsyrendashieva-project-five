@@ -1,0 +1,43 @@
+.addGoalsGontainer{
+    background: rgba(171,214,223, 0.8);
+   
+}
+
+.addGoalsGontainer button{
+    margin: 10px auto 0;
+    padding: 5px;
+    width: 50%;
+    background:#e7ebe0ff;
+    border: 2px #A89C94FF solid;
+}
+
+.addGoalsGontainer button:hover,
+.addGoalsGontainer button:focus
+{
+    background: rgba(171,214,223, 0.8);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 28px;
+    padding: 10px;
+    label{
+        padding: 5px 0;
+    }
+    input{
+        background: rgba(255,255,255, 0.7);
+    }
+}
+
+.inputNewGoal{
+    width: 70%;
+}
+
+.textNewGoalNote{
+    width: 70%;
+    height: 200px;
+    background: rgba(255,255,255, 0.7) ;
+}

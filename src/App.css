@@ -1,60 +1,566 @@
-.App {
-  /* text-align: center; */
-  background: blue;
-  min-height:100vh;
+@font-face {
+  font-family: 'Dancing Script', cursive;
+  src: local("Dancing Script"), url(./../fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf) format("truetype");
 }
 
-.App-wrapper{
-  max-width: 1240px;
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+  src: local("Open_Sans"), url(./../fonts/Open_Sans/OpenSans-Italic.ttf) format("truetype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Dancing Script', cursive;
+}
+
+.appWrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  text-decoration: none;
+  display: block;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article, aside, footer, header, nav, section {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+figcaption, figure, main {
+  display: block;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+b, strong {
+  font-weight: inherit;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+code, kbd, samp {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
+
+audio, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button, input {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, html [type=button], [type=reset], [type=submit] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: .35em .75em .625em;
+}
+
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox], [type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details, menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: 'Dancing Script', cursive;
+  src: local("Dancing Script"), url(./../fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+  src: local("Open_Sans"), url(./../fonts/Open_Sans/OpenSans-Italic.ttf) format("truetype");
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 35px;
+}
+
+h4 {
+  font-size: 30px;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+
+.App {
+  height: 100vh;
+}
+
+.appWrapper {
+  max-width: 1140px;
   margin: 0 auto;
   height: 100vh;
 }
 
-.App-main{
+.appMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  min-height: 100vh;
-  background: #61dafb;
-  flex-direction: row;
+  height: 100vh;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.Side-section{
-  background: #282c34;
+.sideSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #abd6dfff;
   width: 30%;
-  min-height: 100vh;
+  height: 100vh;
+  padding: 5px;
 }
 
-.Main-section{
-  background: red;
+.sideSection span {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.8rem;
+  padding: 15px;
+}
+
+.mainSection {
+  background: url("./../assets/pexels-karolina-grabowska-4210787.jpg");
+  background-size: cover;
   width: 70%;
-  min-height: 100vh;
+  height: 100vh;
+  padding: 5px;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.userBox,
+.goalBox,
+.addGoalBox,
+.logoutBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #e7ebe0ff;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.userBox {
+  background-color: #D9AFD9;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#D9AFD9), to(#97D9E1));
+  background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+  height: 35vh;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.goalQuote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80%;
+  padding: 10px;
 }
+
+.goalQuote p {
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 4rem;
+  line-height: 40px;
+}
+
+blockquote {
+  padding: 2%;
+  font-style: italic;
+  line-height: 145%;
+  position: relative;
+  margin-top: 40px;
+}
+
+blockquote:before {
+  content: "\201C";
+  font-size: 500%;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+
+.goalBox,
+.addGoalBox {
+  height: 25vh;
+  margin-bottom: 15px;
+}
+
+.logoutBox {
+  width: 100%;
+  height: 15vh;
+}
+
+.sideSection button,
+.webAuthor {
+  background-color: #D9AFD9;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#D9AFD9), to(#97D9E1));
+  background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+  padding: 20px 30px;
+  border-radius: 20px;
+  width: 85%;
+}
+
+.sideSection button:hover,
+.sideSection button:focus,
+.sideSection button:active {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.goalContainer h1 {
+  margin: 0;
+  padding: 10px;
+}
+
+.goalContainer span {
+  padding: 5px;
+}
+
+.goalContainer p {
+  padding: 5px 10px;
+}
+
+.goalContainer p::first-letter {
+  text-transform: capitalize;
+}
+
+.oneGoal {
+  float: left;
+  background: #A89C94FF;
+  list-style-type: none;
+  margin: 2px;
+  padding: 5px;
+  width: calc(50% - 4px);
+  text-decoration: none;
+  text-align: left;
+}
+
+.goalName {
+  text-align: center;
+}
+
+.goalName p {
+  font-size: 15px;
+  color: #abd6dfff;
+}
+
+.oneGoal:hover,
+.oneGoal:focus {
+  background: #abd6dfff;
+}
+
+.oneGoal:hover p,
+.oneGoal:focus p {
+  color: #A89C94FF;
+}
+
+.goalContainer button {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px;
+  width: calc(33% - 10px);
+  border: 2px #abd6dfff solid;
+  border-radius: 4px;
+}
+
+.goalContainer button:hover,
+.goalContainer button:focus {
+  background: #A89C94FF;
+  border: 2px #abd6dfff solid;
+}
+
+.moreGoalInfoButton {
+  height: 250px;
+  width: 100%;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.fullGoalInfo {
+  background: #e7ebe0ff;
+}
+
+.hide {
+  display: none;
+}
+
+.addGoalsGontainer {
+  background: rgba(171, 214, 223, 0.8);
+}
+
+.addGoalsGontainer button {
+  margin: 10px auto 0;
+  padding: 5px;
+  width: 50%;
+  background: #e7ebe0ff;
+  border: 2px #A89C94FF solid;
+}
+
+.addGoalsGontainer button:hover,
+.addGoalsGontainer button:focus {
+  background: rgba(171, 214, 223, 0.8);
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  text-align: left;
+  font-size: 28px;
+  padding: 10px;
+}
+
+form label {
+  padding: 5px 0;
+}
+
+form input {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.inputNewGoal {
+  width: 70%;
+}
+
+.textNewGoalNote {
+  width: 70%;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.7);
+}
+/*# sourceMappingURL=App.css.map */

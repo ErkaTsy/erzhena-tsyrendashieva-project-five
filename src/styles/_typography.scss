@@ -1,0 +1,23 @@
+@font-face{
+    font-family: 'Dancing Script', cursive;
+    src: local('Dancing Script'), url(./../fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf) format('truetype');    
+}
+
+@font-face{
+    font-family: 'Open Sans', sans-serif;
+    src: local('Open_Sans'), url(./../fonts/Open_Sans/OpenSans-Italic.ttf) format('truetype');    
+}
+
+h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+}
+
+h4{
+   font-size: 30px;
+}
+
+p{
+     font-family: 'Open Sans', sans-serif;
+     font-size: 20px;
+}

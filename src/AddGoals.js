@@ -18,9 +18,7 @@ class AddGoals extends Component {
         goalNote: ""
     };
     this.formSubmitNewGoal = this.formSubmitNewGoal.bind(this);
-  }
-
-   
+  }   
 
   componentDidMount() {
     // check if goal object is not empty, if it not empty do something
@@ -61,7 +59,7 @@ class AddGoals extends Component {
       "/" +
       this.state.goalDeadline.getFullYear();
     // make a reference to the database
-    const dbRef = firebase.database().ref();
+    const dbRef = firebase.database().ref("users/"+this.props.userId);
     const userNewGoal = {
       goalName: this.state.goalName,
       goalDeadline: date,
@@ -84,41 +82,45 @@ class AddGoals extends Component {
   //update goal
   editCurrentGoal = (goalId) =>{
     // convert date to dd/mm/yyyy 
-    // let date =
-    //   this.state.goalDeadline.getDate() +
-    //   "/" +
-    //   parseInt(this.state.goalDeadline.getMonth() + 1) +
-    //   "/" +
-    //   this.state.goalDeadline.getFullYear();
-    const dbRef = firebase.database().ref();
+    let date =
+      this.state.goalDeadline.getDate() +
+      "/" +
+      parseInt(this.state.goalDeadline.getMonth() + 1) +
+      "/" +
+      this.state.goalDeadline.getFullYear();
+    //make a reference to the database
+    const dbRef = firebase.database().ref("users/" + this.props.userId);
     dbRef.child(goalId).update({
       goalName: this.state.goalName,
-      goalDeadline: this.state.goalDeadline,
+      goalDeadline: date,
       goalNote: this.state.goalNote
     });
   }
   
   render() {
     return (
-      <div className="add-goals-container">
+      <div className="addGoalsGontainer">
         <form onChange={this.formSubmitNewGoal}>
-          <label htmlFor="newGoalName">Name of your goal</label>
+          <label className="newGoal" htmlFor="newGoalName">What is your goal?</label>
           <input
+            className="inputNewGoal"
             type="text"
-            id="newGoalName"
+            id="newGoalName" 
             value={this.state.goalName}
             onChange={(event) =>
               this.setState({ goalName: event.target.value })
             }
           />
-          <label htmlFor="goalDeadline">Deadline</label>
+          <label htmlFor="goalDeadline">Pick a deadline</label>
           <DatePicker
             selected={this.state.goalDeadline}
+            minDate = {new Date()}
             value={this.state.goalDeadline}
             onChange={(date) => this.setGoalDeadline(date)}
           />
-          <label htmlFor="goalNote">Note</label>
-          <textarea
+          <label class="newGoalNote" htmlFor="goalNote">Note</label>
+          <textarea  
+            class="textNewGoalNote"        
             value={this.state.goalNote}
             onChange={(event) =>
               this.setState({ goalNote: event.target.value })

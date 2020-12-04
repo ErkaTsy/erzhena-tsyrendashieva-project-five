@@ -1,0 +1,120 @@
+.App{
+  height:100vh;
+}
+
+.appWrapper{
+  max-width: 1140px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.appMain{
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+}
+
+.sideSection{
+  display: flex;
+  flex-direction: column;  
+  background: #abd6dfff;
+  width: 30%;
+  height: 100vh;
+  padding:5px;
+    span{
+      font-family: 'Dancing Script', cursive;
+      font-size: 3.8rem;
+      padding: 15px;
+    }
+    
+}
+
+.mainSection{
+  background:url('./../assets/pexels-karolina-grabowska-4210787.jpg');
+  background-size: cover;
+  width: 70%;
+  height: 100vh;
+  padding:  5px;
+  text-align: center;
+}
+
+.userBox,
+.goalBox,
+.addGoalBox,
+.logoutBox{  
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  background: #e7ebe0ff;
+  width: 100%; 
+}
+
+.userBox{ 
+  background-color: #D9AFD9;
+  background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+  height: 35vh; 
+  padding-bottom: 10px;
+  margin-bottom: 15px;  
+}
+
+.goalQuote{
+  display: flex;
+  align-items: center;
+  // background: #f1f4ffff;
+  height: 80%;
+  padding: 10px;
+  p{
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    line-height: 40px;
+  }
+}
+
+blockquote{
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+
+blockquote:before{
+    content: "\201C";
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+.goalBox,
+.addGoalBox{
+  height: 25vh;
+  margin-bottom: 15px;
+}
+
+.logoutBox{
+  width: 100%;
+  height: 15vh;
+}
+
+.sideSection button,
+.webAuthor {
+      background-color: #D9AFD9;
+      background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+      padding: 20px 30px;
+      border-radius: 20px;
+      width: 85%;
+}
+
+
+
+.sideSection button:hover,
+.sideSection button:focus,
+.sideSection button:active {
+      border-radius: 20px;
+      background: rgba(255,255,255, 0.5);   
+}
+
+

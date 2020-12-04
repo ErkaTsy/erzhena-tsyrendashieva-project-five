@@ -1,0 +1,45 @@
+@font-face{
+    font-family: 'Dancing Script', cursive;
+    src: local('Dancing Script'), url(./../fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf) format('truetype');    
+}
+
+@font-face{
+    font-family: 'Open Sans', sans-serif;
+    src: local('Open_Sans'), url(./../fonts/Open_Sans/OpenSans-Italic.ttf) format('truetype');    
+}
+
+// General selectors
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;  
+    font-family: 'Dancing Script', cursive;  
+}
+
+.appWrapper {
+    max-width: 1140px;   
+    margin: 0 auto;
+}
+
+body {
+    font-size: 1.6rem;    
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    text-decoration: none;
+    display: block;
+    outline:none;
+}
+
+ul {
+    list-style: none;
+}
