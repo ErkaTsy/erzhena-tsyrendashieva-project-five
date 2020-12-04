@@ -1,0 +1,74 @@
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (max-width: 1200px) {...}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 850px) {
+.sideSection{
+    span{
+      font-family: 'Dancing Script', cursive;
+      font-size: 3rem;
+      padding: 5px;
+    }    
+}
+
+.goalQuote{
+  p{
+    font-size: 3rem;
+    line-height: 40px;
+  }
+}
+
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+.oneGoal{ 
+  width: calc(100% - 4px); 
+}    
+
+.addGoalsGontainer button{
+    width: 80%;
+    background:#e7ebe0ff;
+    border: 2px #A89C94FF solid;
+}
+.inputNewGoal{
+    width: 100%;
+}
+
+.textNewGoalNote{
+    width: 100%;
+}
+
+.datePicker{
+    width: 100%;
+}
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+.hamburger,
+.toggle-menu{
+    display: block;
+}
+
+.sideSection input:checked ~ ul
+{
+  transform: none;  
+}
+
+.menu{   
+    position: absolute;
+    background-color: rgb(171,214,223);
+    width: 100%;
+    padding: 40px;
+    list-style-type: none;
+    transform: translate(-120%, 0);
+    display: flex;
+    flex-direction: column;
+}
+
+}
+
+
+
+
+

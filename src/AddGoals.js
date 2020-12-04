@@ -113,6 +113,7 @@ class AddGoals extends Component {
           />
           <label htmlFor="goalDeadline">Pick a deadline</label>
           <DatePicker
+            className="datePicker"
             selected={this.state.goalDeadline}
             minDate = {new Date()}
             value={this.state.goalDeadline}

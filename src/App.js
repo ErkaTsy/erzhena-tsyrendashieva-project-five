@@ -52,29 +52,30 @@ class App extends Component{
       <div className="App">
         <div className="appMain appWrapper">
           <div className="sideSection">
-            <div className="userBox">
-              <div className="goalQuote">
-                <blockquote><p>Dreams don't work unless you do.</p></blockquote>
-              </div>
-            </div>
-            <div className="goalBox">
-              <button onClick={() => this.showComponent(GOAL)}>
-                <span>My goal list</span>
-              </button>
-            </div>
-            <div className="addGoalBox">
-              <button onClick={() => this.showComponent(ADDGOAL)}>
-                <span>Add new goal</span>
-              </button>
-            </div>
-            <div className="logoutBox">
-              <div className="webAuthor">
-                <span>Build by E.T.</span>
-              </div>
-            </div>
+            <input type="checkbox" className="toggle-menu"/>
+            <div className="hamburger"></div>
+            <ul className="menu">
+              <li className="userBox">
+                <div className="goalQuote">
+                  <p>Dreams don't work unless you do.</p>
+                </div>
+              </li>
+              <li className="goalBox">
+                <button onClick={() => this.showComponent(GOAL)}>
+                  <span>My goal list</span>
+                </button>
+              </li>
+              <li className="addGoalBox">
+                <button onClick={() => this.showComponent(ADDGOAL)}>
+                  <span>Add new goal</span>
+                </button>
+              </li>
+              <li className="logoutBox">
+              </li>
+            </ul>
           </div>
           <div className="mainSection">
-            {this.state.currentComponent === GOAL&& this.state.userId && (
+            {this.state.currentComponent === GOAL && this.state.userId && (
               <Goals
                 userId={this.state.userId}
                 updateGoal={(goal) => this.updateGoal(goal)}

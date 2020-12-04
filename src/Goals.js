@@ -137,7 +137,7 @@ class Goals extends Component {
                         this.achieveGoal(goal.id);
                       }}
                     >
-                      Achieved
+                      Done
                     </button>
                   </div>
                 </li>
