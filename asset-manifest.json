@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/erzhena-tsyrendashieva-project-five/static/css/main.636b80c4.chunk.css",
-    "main.js": "/erzhena-tsyrendashieva-project-five/static/js/main.0903bf6b.chunk.js",
-    "main.js.map": "/erzhena-tsyrendashieva-project-five/static/js/main.0903bf6b.chunk.js.map",
-    "runtime-main.js": "/erzhena-tsyrendashieva-project-five/static/js/runtime-main.9ede6a49.js",
-    "runtime-main.js.map": "/erzhena-tsyrendashieva-project-five/static/js/runtime-main.9ede6a49.js.map",
+    "main.css": "/erzhena-tsyrendashieva-project-five/static/css/main.757fe7de.chunk.css",
+    "main.js": "/erzhena-tsyrendashieva-project-five/static/js/main.9d4f5f4b.chunk.js",
+    "main.js.map": "/erzhena-tsyrendashieva-project-five/static/js/main.9d4f5f4b.chunk.js.map",
+    "runtime-main.js": "/erzhena-tsyrendashieva-project-five/static/js/runtime-main.e8f96959.js",
+    "runtime-main.js.map": "/erzhena-tsyrendashieva-project-five/static/js/runtime-main.e8f96959.js.map",
     "static/css/2.95456d05.chunk.css": "/erzhena-tsyrendashieva-project-five/static/css/2.95456d05.chunk.css",
-    "static/js/2.559d868c.chunk.js": "/erzhena-tsyrendashieva-project-five/static/js/2.559d868c.chunk.js",
-    "static/js/2.559d868c.chunk.js.map": "/erzhena-tsyrendashieva-project-five/static/js/2.559d868c.chunk.js.map",
-    "static/js/3.b5092a93.chunk.js": "/erzhena-tsyrendashieva-project-five/static/js/3.b5092a93.chunk.js",
-    "static/js/3.b5092a93.chunk.js.map": "/erzhena-tsyrendashieva-project-five/static/js/3.b5092a93.chunk.js.map",
+    "static/js/2.283c1a98.chunk.js": "/erzhena-tsyrendashieva-project-five/static/js/2.283c1a98.chunk.js",
+    "static/js/2.283c1a98.chunk.js.map": "/erzhena-tsyrendashieva-project-five/static/js/2.283c1a98.chunk.js.map",
+    "static/js/3.0f8b9e21.chunk.js": "/erzhena-tsyrendashieva-project-five/static/js/3.0f8b9e21.chunk.js",
+    "static/js/3.0f8b9e21.chunk.js.map": "/erzhena-tsyrendashieva-project-five/static/js/3.0f8b9e21.chunk.js.map",
     "index.html": "/erzhena-tsyrendashieva-project-five/index.html",
     "static/css/2.95456d05.chunk.css.map": "/erzhena-tsyrendashieva-project-five/static/css/2.95456d05.chunk.css.map",
-    "static/css/main.636b80c4.chunk.css.map": "/erzhena-tsyrendashieva-project-five/static/css/main.636b80c4.chunk.css.map",
-    "static/js/2.559d868c.chunk.js.LICENSE.txt": "/erzhena-tsyrendashieva-project-five/static/js/2.559d868c.chunk.js.LICENSE.txt"
+    "static/css/main.757fe7de.chunk.css.map": "/erzhena-tsyrendashieva-project-five/static/css/main.757fe7de.chunk.css.map",
+    "static/js/2.283c1a98.chunk.js.LICENSE.txt": "/erzhena-tsyrendashieva-project-five/static/js/2.283c1a98.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/erzhena-tsyrendashieva-project-five/static/media/pexels-namakuki-751374.4b5e94b1.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.9ede6a49.js",
+    "static/js/runtime-main.e8f96959.js",
     "static/css/2.95456d05.chunk.css",
-    "static/js/2.559d868c.chunk.js",
-    "static/css/main.636b80c4.chunk.css",
-    "static/js/main.0903bf6b.chunk.js"
+    "static/js/2.283c1a98.chunk.js",
+    "static/css/main.757fe7de.chunk.css",
+    "static/js/main.9d4f5f4b.chunk.js"
   ]
 }
