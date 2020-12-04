@@ -22,6 +22,7 @@ class App extends Component{
     this.updateGoal = this.updateGoal.bind(this);
     this.showComponent = this.showComponent.bind(this);
 
+    // create a unique user id that will help to have own list of goals
     firebase.auth().signInAnonymously();
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
@@ -33,13 +34,19 @@ class App extends Component{
     });
   }
   
- 
+// function that displays component
   showComponent(name){
+    // to close hamburger menu on click
+    let menu = document.getElementById("toggle-menu");
+    menu.checked = false
     this.setState({
       currentComponent:name
-    })
+    })  
+    
+    // document.getElementById("navbar").style.display = "none";  
   }
-  
+ 
+  // create function that passes goalObj with id that passes data back to the form 
   updateGoal(goal){
     this.setState({
       currentGoal: goal
@@ -52,7 +59,7 @@ class App extends Component{
       <div className="App">
         <div className="appMain appWrapper">
           <div className="sideSection">
-            <input type="checkbox" className="toggle-menu"/>
+            <input type="checkbox" id="toggle-menu" className="toggle-menu" />
             <div className="hamburger"></div>
             <ul className="menu">
               <li className="userBox">
@@ -66,12 +73,14 @@ class App extends Component{
                 </button>
               </li>
               <li className="addGoalBox">
-                <button onClick={() => this.showComponent(ADDGOAL)}>
+                <button
+                  id="addGoalButton"
+                  onClick={() => this.showComponent(ADDGOAL)}
+                >
                   <span>Add new goal</span>
                 </button>
               </li>
-              <li className="logoutBox">
-              </li>
+              <li className="logoutBox"></li>
             </ul>
           </div>
           <div className="mainSection">
